@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="_css/estilo.css"/>
+  <meta charset="UTF-8"/>
+  <title>Teste para Estagio</title>
+  <script language="javascript">
+	function validar(){	
+	if (document.cadastro.tipo.value==""){
+		alert("Preencha o campo Tipo corretamente!");
+		document.cadastro.tipo.focus();
+		return false;
+	}
+	if (document.cadastro.nome.value==""){
+		alert("Preencha o campo Nome corretamente!");
+		document.cadastro.nome.focus();
+		return false;
+	}
+	if (document.cadastro.quant.value==""){
+		alert("Preencha o campo Quantidade corretamente!");
+		document.cadastro.quant.focus();
+		return false;
+	}
+	if (document.cadastro.preco.value==""){
+		alert("Preencha o campo Preço corretamente!");
+		document.cadastro.preco.focus();
+		return false;
+	}
+	}
+  </script>
+</head>
+<body>
+<div>
+<form method="GET" name="cadastro" action="TesteEstagio.php" onsubmit="return validar();">
+	<label>Tipo da Mercadoria:</label>
+	<input type="text" name="tipo" />
+	<br/>
+	<label>Nome da Mercadoria:</label>
+	<input type="text" name="nome" />
+	<br/>
+	<label>Quantidade:</label>
+	<input type="number" name="quant" />
+	<br/>
+	<label>Preço:</label>
+	<input type="number" step="any" name="preco" />
+	<br/>
+	<label>Tipo do Negocio:</label>
+	<select name="negocio">
+		<option value="0">Compra</option>
+		<option value="1">Venda</option>
+	</select>
+	<br/>
+	<input type="submit" value="Validar"/>    
+</form>
+</div>
+</body>
+</html>
