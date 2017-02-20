@@ -1,0 +1,33 @@
+html {
+    font: 15pt Arial;
+}
+
+div::before {
+    content: " Negocição de Mercadorias ";
+    font: 15pt Arial;
+    padding: 5px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    width: 550px;
+}
+
+div {
+    margin: auto auto 100px auto;
+    padding: 100px;
+    width: auto;
+    min-height:300px;
+}
+
+table,td,th{
+	border: 1px solid black;
+	border-collapse: collapse; 
+	width: 800px;
+	text-align: center;
+}
+.um td {
+	text-align: right;
+	}
+.dois td {
+	text-align: center;
+	}
