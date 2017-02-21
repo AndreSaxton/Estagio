@@ -9,13 +9,14 @@
 <div>	
     <?php
     require_once('conexao.php'); //chama o arquivo de conexão com o banco
+		$codmer =  $_GET["codmer"];
 		$tipo =  $_GET["tipo"];
 		$nome =  $_GET["nome"];
 		$quant =  $_GET["quant"];
 		$preco =  $_GET["preco"];
 		$negocio =  $_GET["negocio"];
 		//pega os dados no html
-		$resultado = $conexao->query("INSERT INTO mercadoria(tipo,nome,quant,preco,negocio) VALUES('$tipo','$nome','$quant','$preco','$negocio')"); //inserindo dados na tabela mercadoria"
+		$resultado = $conexao->query("INSERT INTO mercadoria(codmer,tipo,nome,quant,preco,negocio) VALUES('$codmer','$tipo','$nome','$quant','$preco','$negocio')"); //inserindo dados na tabela mercadoria"
 		$verifica = $conexao->query("SELECT * FROM mercadoria WHERE nome = '$nome'");
         $rows = $verifica->num_rows;
         if($rows == 0){ //verifica se a informação chegou
@@ -25,6 +26,7 @@
 		//busca os dados na tabela 
 		echo "<table>
 			<tr class='dois'>
+			<td> Número da Operação </td>
 			<td> Código da Mercadoria </td>
 			<td> Tipo da Mercadoria </td>
 			<td> Nome da Mercadoria </td>
@@ -39,6 +41,7 @@
 				$info['negocio'] = "Venda";
 		echo "<tr class='um'>
 			<td> ".$info['codigo']." </td>
+			<td> ".$info['codmer']." </td>
 			<td> ". $info['tipo']." </td>
 			<td> ". $info['nome']." </td>
 			<td> ". $info['quant']." </td>
