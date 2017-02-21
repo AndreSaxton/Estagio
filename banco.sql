@@ -6,7 +6,7 @@ drop table if exists mercadoria;
 Create table mercadoria
 (	
 	codigo int not null auto_increment,  
-	codmer int not null,
+	codmer int not null,  
 	tipo varchar (45) not null,
 	nome varchar (40) not null,
     quant int not null,
