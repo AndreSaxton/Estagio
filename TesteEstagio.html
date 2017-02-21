@@ -6,6 +6,11 @@
   <title>Teste para Estagio</title>
   <script language="javascript">
 	function validar(){	
+	if (document.cadastro.codmer.value==""){
+		alert("Preencha o campo Código corretamente!");
+		document.cadastro.codmer.focus();
+		return false;
+	}
 	if (document.cadastro.tipo.value==""){
 		alert("Preencha o campo Tipo corretamente!");
 		document.cadastro.tipo.focus();
@@ -32,6 +37,9 @@
 <body>
 <div>
 <form method="GET" name="cadastro" action="TesteEstagio.php" onsubmit="return validar();">
+	<label>Código da Mercadoria:</label>
+	<input type="number" name="codmer" />
+	<br/>
 	<label>Tipo da Mercadoria:</label>
 	<input type="text" name="tipo" />
 	<br/>
