@@ -1,6 +1,6 @@
-Create database  if not exists teste DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+Create database  if not exists u770413803_teste DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-Use teste;
+Use u770413803_teste;
 
 drop table if exists mercadoria;
 Create table mercadoria
