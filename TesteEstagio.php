@@ -53,7 +53,7 @@
         }
     ?>
 	<br>
-	<a href="TesteEstagio.html">Voltar</a>
+	<a href="index.html">Voltar</a>
 </div>
 </body>
 </html>
